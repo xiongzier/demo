@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: demo
+  config:
+    import: classpath:book.yml
+  datasource:
+    url: jdbc:mysql://localhost:3306/dbsc0423?useSSL=false&serverTimezone=UTC
+    username: root
+    password: Lzh20030526.
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jpa:
+      hibernate:
+        ddl-auto: update
+      show-sql: true
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/test
+server:
+  port: 8080
+logging:
+  level:
+    root: INFO
+    org: WARN
+    com: DEBUG
+    cn: TRACE
+  file:
+    name: logs/myapp.log
+
+
